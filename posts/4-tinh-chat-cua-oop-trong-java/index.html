@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>OOP: 4 Tính Chất Cốt Lõi Của Lập Trình Hướng Đối Tượng trong Java | Blog của Hữu Khang</title>
+<meta name="keywords" content="">
+<meta name="description" content="Bài viết này sẽ giải thích chi tiết về 4 tính chất cốt lõi của OOP: Tính đóng gói, Kế thừa, Đa hình và Trừu tượng qua các ví dụ Java dễ hiểu.">
+<meta name="author" content="Hữu Khang">
+<link rel="canonical" href="https://thanhprowin1.github.io/posts/4-tinh-chat-cua-oop-trong-java/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a482bf00fa5c046040ef7973ad5fdf5657890cacb596c93f1382f664ca542074.css" integrity="" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://thanhprowin1.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://thanhprowin1.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://thanhprowin1.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://thanhprowin1.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://thanhprowin1.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://thanhprowin1.github.io/posts/4-tinh-chat-cua-oop-trong-java/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://thanhprowin1.github.io/posts/4-tinh-chat-cua-oop-trong-java/">
+  <meta property="og:site_name" content="Blog của Hữu Khang">
+  <meta property="og:title" content="OOP: 4 Tính Chất Cốt Lõi Của Lập Trình Hướng Đối Tượng trong Java">
+  <meta property="og:description" content="Bài viết này sẽ giải thích chi tiết về 4 tính chất cốt lõi của OOP: Tính đóng gói, Kế thừa, Đa hình và Trừu tượng qua các ví dụ Java dễ hiểu.">
+  <meta property="og:locale" content="vi">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-10-10T23:23:00+07:00">
+    <meta property="article:modified_time" content="2025-10-10T23:23:00+07:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="OOP: 4 Tính Chất Cốt Lõi Của Lập Trình Hướng Đối Tượng trong Java">
+<meta name="twitter:description" content="Bài viết này sẽ giải thích chi tiết về 4 tính chất cốt lõi của OOP: Tính đóng gói, Kế thừa, Đa hình và Trừu tượng qua các ví dụ Java dễ hiểu.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://thanhprowin1.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "OOP: 4 Tính Chất Cốt Lõi Của Lập Trình Hướng Đối Tượng trong Java",
+      "item": "https://thanhprowin1.github.io/posts/4-tinh-chat-cua-oop-trong-java/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "OOP: 4 Tính Chất Cốt Lõi Của Lập Trình Hướng Đối Tượng trong Java",
+  "name": "OOP: 4 Tính Chất Cốt Lõi Của Lập Trình Hướng Đối Tượng trong Java",
+  "description": "Bài viết này sẽ giải thích chi tiết về 4 tính chất cốt lõi của OOP: Tính đóng gói, Kế thừa, Đa hình và Trừu tượng qua các ví dụ Java dễ hiểu.",
+  "keywords": [
+    
+  ],
+  "articleBody": "Lời mở đầu Lập trình Hướng đối tượng (OOP) là một mô hình lập trình cực kỳ quan trọng và là nền tảng của ngôn ngữ Java. Nó giúp chúng ta tổ chức code một cách logic, dễ bảo trì và tái sử dụng. Trái tim của OOP nằm ở 4 tính chất cốt lõi: Tính đóng gói, Kế thừa, Đa hình, và Trừu tượng. Trong bài viết này, chúng ta sẽ cùng nhau tìm hiểu chi tiết về từng tính chất nhé.\n1. Tính Đóng Gói (Encapsulation) Giải thích: Viết 2-3 dòng giải thích Tính đóng gói là gì. Hãy nghĩ về nó như một viên thuốc con nhộng, che giấu dữ liệu và các phương thức xử lý bên trong, chỉ cho phép tương tác qua các giao diện công khai. Mục đích là để bảo vệ dữ liệu. Cách triển khai trong Java: Nói về việc sử dụng access modifier private cho các thuộc tính và public cho các phương thức getter và setter. Ví dụ Code: // Ví dụ về lớp Student public class Student { private String name; // Dữ liệu được đóng gói private int age; // Cung cấp phương thức public để truy cập public String getName() { return name; } public void setName(String name) { this.name = name; } public int getAge() { return age; } public void setAge(int age) { if (age \u003e 0) { // Có thể kiểm tra dữ liệu đầu vào this.age = age; } } } 2. Tính Kế Thừa (Inheritance) Giải thích: Kế thừa cho phép một lớp (lớp con) thừa hưởng lại các thuộc tính và phương thức của một lớp khác (lớp cha). Nó thể hiện mối quan hệ “IS-A” (là một). Mục đích là để tái sử dụng code. Cách triển khai trong Java: Nói về từ khóa extends và super. Ví dụ Code: // Lớp cha class Animal { void eat() { System.out.println(\"This animal eats food.\"); } } // Lớp con kế thừa từ Animal class Dog extends Animal { void bark() { System.out.println(\"The dog barks.\"); } } 3. Tính Đa Hình (Polymorphism) Giải thích: Đa hình có nghĩa là “một đối tượng có nhiều hình thái”. Nó cho phép chúng ta thực hiện một hành động theo nhiều cách khác nhau. Dạng phổ biến nhất là Ghi đè phương thức (Method Overriding). Cách triển khai trong Java: Nói về annotation @Override. Ví dụ Code: class Animal { public void makeSound() { System.out.println(\"Some generic animal sound\"); } } class Cat extends Animal { @Override // Ghi đè phương thức của lớp cha public void makeSound() { System.out.println(\"Meow meow\"); } } 4. Tính Trừu Tượng (Abstraction) Giải thích: Tính trừu tượng giúp che giấu đi các chi tiết triển khai phức tạp và chỉ hiển thị các chức năng cần thiết cho người dùng. Giống như bạn lái xe hơi mà không cần biết động cơ bên trong hoạt động ra sao. Cách triển khai trong Java: Nói về lớp trừu tượng (abstract class) và giao diện (interface). Ví dụ Code: // Lớp trừu tượng abstract class Shape { // Phương thức trừu tượng, không có phần thân abstract void draw(); } class Circle extends Shape { void draw() { System.out.println(\"Drawing a circle.\"); } } Kết luận Tóm tắt lại sức mạnh của 4 tính chất OOP khi kết hợp với nhau. Chúng giúp code Java trở nên linh hoạt, an toàn và có cấu trúc tốt hơn như thế nào.\n",
+  "wordCount" : "578",
+  "inLanguage": "en",
+  "datePublished": "2025-10-10T23:23:00+07:00",
+  "dateModified": "2025-10-10T23:23:00+07:00",
+  "author":{
+    "@type": "Person",
+    "name": "Hữu Khang"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://thanhprowin1.github.io/posts/4-tinh-chat-cua-oop-trong-java/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Blog của Hữu Khang",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://thanhprowin1.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://thanhprowin1.github.io/" accesskey="h" title="Blog của Hữu Khang (Alt + H)">Blog của Hữu Khang</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://thanhprowin1.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://thanhprowin1.github.io/posts/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://thanhprowin1.github.io/about/" title="Về tôi">
+                    <span>Về tôi</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      OOP: 4 Tính Chất Cốt Lõi Của Lập Trình Hướng Đối Tượng trong Java
+    </h1>
+    <div class="post-description">
+      Bài viết này sẽ giải thích chi tiết về 4 tính chất cốt lõi của OOP: Tính đóng gói, Kế thừa, Đa hình và Trừu tượng qua các ví dụ Java dễ hiểu.
+    </div>
+    <div class="post-meta"><span title='2025-10-10 23:23:00 +0700 +07'>October 10, 2025</span>&nbsp;·&nbsp;<span>Hữu Khang</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="lời-mở-đầu">Lời mở đầu<a hidden class="anchor" aria-hidden="true" href="#lời-mở-đầu">#</a></h2>
+<p>Lập trình Hướng đối tượng (OOP) là một mô hình lập trình cực kỳ quan trọng và là nền tảng của ngôn ngữ Java. Nó giúp chúng ta tổ chức code một cách logic, dễ bảo trì và tái sử dụng. Trái tim của OOP nằm ở 4 tính chất cốt lõi: Tính đóng gói, Kế thừa, Đa hình, và Trừu tượng. Trong bài viết này, chúng ta sẽ cùng nhau tìm hiểu chi tiết về từng tính chất nhé.</p>
+<h2 id="1-tính-đóng-gói-encapsulation">1. Tính Đóng Gói (Encapsulation)<a hidden class="anchor" aria-hidden="true" href="#1-tính-đóng-gói-encapsulation">#</a></h2>
+<ul>
+<li><strong>Giải thích:</strong> Viết 2-3 dòng giải thích Tính đóng gói là gì. Hãy nghĩ về nó như một viên thuốc con nhộng, che giấu dữ liệu và các phương thức xử lý bên trong, chỉ cho phép tương tác qua các giao diện công khai. Mục đích là để bảo vệ dữ liệu.</li>
+<li><strong>Cách triển khai trong Java:</strong> Nói về việc sử dụng access modifier <code>private</code> cho các thuộc tính và <code>public</code> cho các phương thức <code>getter</code> và <code>setter</code>.</li>
+<li><strong>Ví dụ Code:</strong>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Ví dụ về lớp Student</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Student</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String name; <span style="color:#75715e">// Dữ liệu được đóng gói</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> age;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Cung cấp phương thức public để truy cập</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getName</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> name;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setName</span>(String name) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getAge</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> age;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setAge</span>(<span style="color:#66d9ef">int</span> age) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (age <span style="color:#f92672">&gt;</span> 0) { <span style="color:#75715e">// Có thể kiểm tra dữ liệu đầu vào</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> age;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ul>
+<h2 id="2-tính-kế-thừa-inheritance">2. Tính Kế Thừa (Inheritance)<a hidden class="anchor" aria-hidden="true" href="#2-tính-kế-thừa-inheritance">#</a></h2>
+<ul>
+<li><strong>Giải thích:</strong> Kế thừa cho phép một lớp (lớp con) thừa hưởng lại các thuộc tính và phương thức của một lớp khác (lớp cha). Nó thể hiện mối quan hệ &ldquo;IS-A&rdquo; (là một). Mục đích là để tái sử dụng code.</li>
+<li><strong>Cách triển khai trong Java:</strong> Nói về từ khóa <code>extends</code> và <code>super</code>.</li>
+<li><strong>Ví dụ Code:</strong>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Lớp cha</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">eat</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;This animal eats food.&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Lớp con kế thừa từ Animal</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Dog</span> <span style="color:#66d9ef">extends</span> Animal {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">bark</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;The dog barks.&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ul>
+<h2 id="3-tính-đa-hình-polymorphism">3. Tính Đa Hình (Polymorphism)<a hidden class="anchor" aria-hidden="true" href="#3-tính-đa-hình-polymorphism">#</a></h2>
+<ul>
+<li><strong>Giải thích:</strong> Đa hình có nghĩa là &ldquo;một đối tượng có nhiều hình thái&rdquo;. Nó cho phép chúng ta thực hiện một hành động theo nhiều cách khác nhau. Dạng phổ biến nhất là Ghi đè phương thức (Method Overriding).</li>
+<li><strong>Cách triển khai trong Java:</strong> Nói về annotation <code>@Override</code>.</li>
+<li><strong>Ví dụ Code:</strong>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">makeSound</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Some generic animal sound&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Cat</span> <span style="color:#66d9ef">extends</span> Animal {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span> <span style="color:#75715e">// Ghi đè phương thức của lớp cha</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">makeSound</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Meow meow&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ul>
+<h2 id="4-tính-trừu-tượng-abstraction">4. Tính Trừu Tượng (Abstraction)<a hidden class="anchor" aria-hidden="true" href="#4-tính-trừu-tượng-abstraction">#</a></h2>
+<ul>
+<li><strong>Giải thích:</strong> Tính trừu tượng giúp che giấu đi các chi tiết triển khai phức tạp và chỉ hiển thị các chức năng cần thiết cho người dùng. Giống như bạn lái xe hơi mà không cần biết động cơ bên trong hoạt động ra sao.</li>
+<li><strong>Cách triển khai trong Java:</strong> Nói về lớp trừu tượng (<code>abstract class</code>) và giao diện (<code>interface</code>).</li>
+<li><strong>Ví dụ Code:</strong>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Lớp trừu tượng</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Shape</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Phương thức trừu tượng, không có phần thân</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span>();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Circle</span> <span style="color:#66d9ef">extends</span> Shape {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Drawing a circle.&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ul>
+<h2 id="kết-luận">Kết luận<a hidden class="anchor" aria-hidden="true" href="#kết-luận">#</a></h2>
+<p>Tóm tắt lại sức mạnh của 4 tính chất OOP khi kết hợp với nhau. Chúng giúp code Java trở nên linh hoạt, an toàn và có cấu trúc tốt hơn như thế nào.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://thanhprowin1.github.io/">Blog của Hữu Khang</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

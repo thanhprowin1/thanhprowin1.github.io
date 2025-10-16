@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Blog của Hữu Khang</title>
+    <link>https://thanhprowin1.github.io/posts/</link>
+    <description>Recent content in Posts on Blog của Hữu Khang</description>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>vi</language>
+    <lastBuildDate>Sun, 12 Oct 2025 23:15:00 +0700</lastBuildDate>
+    <atom:link href="https://thanhprowin1.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OOP: Giới thiệu về Đa luồng (Multithreading) trong Java</title>
+      <link>https://thanhprowin1.github.io/posts/gioi-thieu-da-luong-trong-java/</link>
+      <pubDate>Sun, 12 Oct 2025 23:15:00 +0700</pubDate>
+      <guid>https://thanhprowin1.github.io/posts/gioi-thieu-da-luong-trong-java/</guid>
+      <description>Tại sao phải chờ đợi? Multithreading cho phép chương trình Java của bạn thực hiện nhiều công việc cùng lúc, tăng tốc độ và khả năng phản hồi. Hãy cùng tìm hiểu hai cách cơ bản để tạo ra các luồng.</description>
+    </item>
+    <item>
+      <title>OOP: Xử lý ngoại lệ (Exception Handling) trong Java: Tấm khiên bảo vệ chương trình của bạn</title>
+      <link>https://thanhprowin1.github.io/posts/xu-ly-ngoai-le-trong-java/</link>
+      <pubDate>Sun, 12 Oct 2025 23:15:00 +0700</pubDate>
+      <guid>https://thanhprowin1.github.io/posts/xu-ly-ngoai-le-trong-java/</guid>
+      <description>Chương trình bị &amp;#39;sập&amp;#39; bất ngờ là nỗi ác mộng của mọi developer. Bài viết này sẽ hướng dẫn bạn từ A-Z cách sử dụng Exception Handling trong Java để xử lý lỗi một cách duyên dáng và chuyên nghiệp.</description>
+    </item>
+    <item>
+      <title>Fetch API: Cách &#39;giao tiếp&#39; với Server bằng JavaScript </title>
+      <link>https://thanhprowin1.github.io/posts/fetch-api-lay-du-lieu-tu-server/</link>
+      <pubDate>Sun, 12 Oct 2025 22:50:00 +0700</pubDate>
+      <guid>https://thanhprowin1.github.io/posts/fetch-api-lay-du-lieu-tu-server/</guid>
+      <description>Làm thế nào để một trang web hiển thị dữ liệu mới mà không cần tải lại trang? Bí mật nằm ở API. Bài viết này sẽ hướng dẫn bạn cách dùng Fetch API, công cụ tiêu chuẩn để lấy dữ liệu từ server.</description>
+    </item>
+    <item>
+      <title>JS Modern: ES6&#43; có gì mới? Nâng cấp code JavaScript của bạn </title>
+      <link>https://thanhprowin1.github.io/posts/js-es6-co-gi-moi/</link>
+      <pubDate>Sun, 12 Oct 2025 22:50:00 +0700</pubDate>
+      <guid>https://thanhprowin1.github.io/posts/js-es6-co-gi-moi/</guid>
+      <description>ES6 là bản cập nhật lớn nhất trong lịch sử JavaScript. Bài viết này sẽ giới thiệu những tính năng cốt lõi và hay dùng nhất giúp code của bạn trở nên ngắn gọn, dễ đọc và mạnh mẽ hơn.</description>
+    </item>
+    <item>
+      <title>OOP: Abstract Class vs. Interface: Cuộc chiến của những &#39;Bản thiết kế&#39; trong Java</title>
+      <link>https://thanhprowin1.github.io/posts/abstract-class-vs-interface/</link>
+      <pubDate>Sun, 12 Oct 2025 22:50:00 +0700</pubDate>
+      <guid>https://thanhprowin1.github.io/posts/abstract-class-vs-interface/</guid>
+      <description>Cả hai đều là những bản thiết kế cho các lớp khác, nhưng chúng phục vụ những mục đích rất khác nhau. Bài viết này sẽ làm rõ khi nào bạn nên dùng Lớp trừu tượng và khi nào nên dùng Giao diện.</description>
+    </item>
+    <item>
+      <title>OOP: ArrayList vs. LinkedList trong Java: Cuộc chiến hiệu năng và khi nào nên chọn ai?</title>
+      <link>https://thanhprowin1.github.io/posts/so-sanh-arraylist-va-linkedlist/</link>
+      <pubDate>Sun, 12 Oct 2025 22:50:00 +0700</pubDate>
+      <guid>https://thanhprowin1.github.io/posts/so-sanh-arraylist-va-linkedlist/</guid>
+      <description>Cả ArrayList và LinkedList đều dùng để lưu danh sách, nhưng cấu trúc bên trong hoàn toàn khác biệt. Bài viết này sẽ mổ xẻ hiệu năng và giúp bạn chọn đúng công cụ cho từng bài toán.</description>
+    </item>
+    <item>
+      <title>Async JS: Hành trình từ Callback Hell đến Promise và Async/Await</title>
+      <link>https://thanhprowin1.github.io/posts/async-js-callback-promise-async-await/</link>
+      <pubDate>Fri, 10 Oct 2025 23:23:00 +0700</pubDate>
+      <guid>https://thanhprowin1.github.io/posts/async-js-callback-promise-async-await/</guid>
+      <description>Tại sao code JavaScript không chạy tuần tự? Bài viết này sẽ giải thích về bất đồng bộ và hành trình進化 của nó, từ &amp;#39;địa ngục callback&amp;#39; rối rắm đến cú pháp thanh lịch của async/await.</description>
+    </item>
+    <item>
+      <title>JS DOM: DOM là gì? Hướng dẫn &#39;thao túng&#39; trang web với JavaScript  manipulator</title>
+      <link>https://thanhprowin1.github.io/posts/js-dom-thao-tung-trang-web/</link>
+      <pubDate>Fri, 10 Oct 2025 23:23:00 +0700</pubDate>
+      <guid>https://thanhprowin1.github.io/posts/js-dom-thao-tung-trang-web/</guid>
+      <description>DOM chính là cây cầu nối giữa HTML và JavaScript. Bài viết này sẽ hướng dẫn bạn các lệnh cơ bản nhất để chọn, thay đổi nội dung, và tạo ra tương tác trên trang web mà không cần tải lại trang.</description>
+    </item>
+    <item>
+      <title>OOP: 4 Tính Chất Cốt Lõi Của Lập Trình Hướng Đối Tượng trong Java</title>
+      <link>https://thanhprowin1.github.io/posts/4-tinh-chat-cua-oop-trong-java/</link>
+      <pubDate>Fri, 10 Oct 2025 23:23:00 +0700</pubDate>
+      <guid>https://thanhprowin1.github.io/posts/4-tinh-chat-cua-oop-trong-java/</guid>
+      <description>Bài viết này sẽ giải thích chi tiết về 4 tính chất cốt lõi của OOP: Tính đóng gói, Kế thừa, Đa hình và Trừu tượng qua các ví dụ Java dễ hiểu.</description>
+    </item>
+  </channel>
+</rss>

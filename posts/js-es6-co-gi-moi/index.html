@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>JS Modern: ES6&#43; có gì mới? Nâng cấp code JavaScript của bạn  | Blog của Hữu Khang</title>
+<meta name="keywords" content="">
+<meta name="description" content="ES6 là bản cập nhật lớn nhất trong lịch sử JavaScript. Bài viết này sẽ giới thiệu những tính năng cốt lõi và hay dùng nhất giúp code của bạn trở nên ngắn gọn, dễ đọc và mạnh mẽ hơn.">
+<meta name="author" content="Hữu Khang">
+<link rel="canonical" href="https://thanhprowin1.github.io/posts/js-es6-co-gi-moi/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a482bf00fa5c046040ef7973ad5fdf5657890cacb596c93f1382f664ca542074.css" integrity="" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://thanhprowin1.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://thanhprowin1.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://thanhprowin1.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://thanhprowin1.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://thanhprowin1.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://thanhprowin1.github.io/posts/js-es6-co-gi-moi/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://thanhprowin1.github.io/posts/js-es6-co-gi-moi/">
+  <meta property="og:site_name" content="Blog của Hữu Khang">
+  <meta property="og:title" content="JS Modern: ES6&#43; có gì mới? Nâng cấp code JavaScript của bạn ">
+  <meta property="og:description" content="ES6 là bản cập nhật lớn nhất trong lịch sử JavaScript. Bài viết này sẽ giới thiệu những tính năng cốt lõi và hay dùng nhất giúp code của bạn trở nên ngắn gọn, dễ đọc và mạnh mẽ hơn.">
+  <meta property="og:locale" content="vi">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-10-12T22:50:00+07:00">
+    <meta property="article:modified_time" content="2025-10-12T22:50:00+07:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS Modern: ES6&#43; có gì mới? Nâng cấp code JavaScript của bạn ">
+<meta name="twitter:description" content="ES6 là bản cập nhật lớn nhất trong lịch sử JavaScript. Bài viết này sẽ giới thiệu những tính năng cốt lõi và hay dùng nhất giúp code của bạn trở nên ngắn gọn, dễ đọc và mạnh mẽ hơn.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://thanhprowin1.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "JS Modern: ES6+ có gì mới? Nâng cấp code JavaScript của bạn ",
+      "item": "https://thanhprowin1.github.io/posts/js-es6-co-gi-moi/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "JS Modern: ES6+ có gì mới? Nâng cấp code JavaScript của bạn ",
+  "name": "JS Modern: ES6\u002b có gì mới? Nâng cấp code JavaScript của bạn ",
+  "description": "ES6 là bản cập nhật lớn nhất trong lịch sử JavaScript. Bài viết này sẽ giới thiệu những tính năng cốt lõi và hay dùng nhất giúp code của bạn trở nên ngắn gọn, dễ đọc và mạnh mẽ hơn.",
+  "keywords": [
+    
+  ],
+  "articleBody": "Giới thiệu: ES6 là gì? ES6 (hay ECMAScript 2015) là phiên bản thứ sáu của chuẩn ECMAScript, thứ đặt ra các quy tắc cho ngôn ngữ JavaScript. Hãy coi nó như một bản “nâng cấp hệ điều hành” cực lớn cho JavaScript. Trước ES6, code JavaScript có phần dài dòng và đôi khi khó quản lý. ES6 ra đời đã thay đổi cuộc chơi, mang đến những cú pháp mới giúp lập trình viên viết code “sạch” và hiệu quả hơn.\nNgày nay, các tính năng của ES6+ (ES6 và các phiên bản sau nó) đã trở thành tiêu chuẩn. Hãy cùng điểm qua những thay đổi đáng giá nhất nhé!\n1. Tạm biệt var, chào let và const Trước ES6, chúng ta chỉ có var để khai báo biến. var có một số hành vi khó hiểu liên quan đến “scope” (phạm vi). ES6 giới thiệu let và const để giải quyết vấn đề này.\nlet: Cho phép bạn khai báo các biến có phạm vi trong khối (block scope). Tức là biến chỉ tồn tại bên trong cặp dấu ngoặc nhọn {} gần nhất. const: Giống như let, nhưng dùng để khai báo hằng số. Tức là giá trị của biến không thể được gán lại sau khi khai báo. Ví dụ Code: // Trước ES6 (dùng var) for (var i = 0; i \u003c 3; i++) { console.log(i); // In ra 0, 1, 2 } console.log(i); // Vẫn in ra 3! Biến i bị \"rò rỉ\" ra ngoài vòng lặp. // Với ES6 (dùng let) for (let j = 0; j \u003c 3; j++) { console.log(j); // In ra 0, 1, 2 } // console.log(j); // Lỗi! Biến j không tồn tại ở đây. const PI = 3.14; // PI = 3.14159; // Lỗi! Không thể gán lại giá trị cho hằng số.+++ date = '2025-10-13T00:17:10+07:00' draft = true title = 'Js Es6 Co Gi Moi' 2. Arrow Functions (=\u003e) - Viết hàm ngắn gọn Arrow function cung cấp một cú pháp ngắn hơn để viết các hàm, đặc biệt hữu ích cho các hàm callback.\nVí dụ Code: // Trước ES6 const numbers = [1, 2, 3]; const doubledOld = numbers.map(function(n) { return n * 2; }); console.log(doubledOld); // [2, 4, 6] // Với ES6 const doubledNew = numbers.map(n =\u003e n * 2); // Ngắn hơn rất nhiều! console.log(doubledNew); // [2, 4, 6] 3. Template Literals (`) - Tạm biệt phép + chuỗi Template Literals cho phép bạn nhúng biến và biểu thức vào trong chuỗi một cách dễ dàng, cũng như tạo chuỗi nhiều dòng mà không cần \\n.\nVí dụ Code: const name = \"Khang\"; const age = 22; // Trước ES6 const greetingOld = \"Xin chào, tôi là \" + name + \" và tôi \" + age + \" tuổi.\"; // Với ES6 const greetingNew = `Xin chào, tôi là ${name} và tôi ${age} tuổi.`; console.log(greetingNew); 4. Destructuring - “Giải nén” Object và Array Destructuring là một cú pháp tiện lợi cho phép bạn trích xuất dữ liệu từ Mảng (Array) hoặc Đối tượng (Object) và gán chúng vào các biến riêng biệt.\nVí dụ Code: // Destructuring cho Object const person = { firstName: \"Hữu\", lastName: \"Khang\", }; // Cách cũ: const firstName = person.firstName; const lastName = person.lastName; const { firstName, lastName } = person; // Cách mới console.log(firstName); // \"Hữu\" // Destructuring cho Array const colors = [\"đỏ\", \"vàng\", \"xanh\"]; // Cách cũ: const red = colors[0]; const yellow = colors[1]; const [red, yellow] = colors; // Cách mới console.log(red); // \"đỏ\" Kết luận Những tính năng trên chỉ là một phần nhỏ trong những gì ES6+ mang lại, nhưng chúng là những thay đổi có tác động lớn nhất đến cách chúng ta viết code JavaScript hàng ngày. Việc áp dụng các cú pháp hiện đại này không chỉ giúp code của bạn ngắn gọn hơn mà còn dễ đọc, dễ bảo trì và ít lỗi hơn. Hãy bắt đầu nâng cấp code của bạn ngay hôm nay!\n",
+  "wordCount" : "670",
+  "inLanguage": "en",
+  "datePublished": "2025-10-12T22:50:00+07:00",
+  "dateModified": "2025-10-12T22:50:00+07:00",
+  "author":{
+    "@type": "Person",
+    "name": "Hữu Khang"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://thanhprowin1.github.io/posts/js-es6-co-gi-moi/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Blog của Hữu Khang",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://thanhprowin1.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://thanhprowin1.github.io/" accesskey="h" title="Blog của Hữu Khang (Alt + H)">Blog của Hữu Khang</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://thanhprowin1.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://thanhprowin1.github.io/posts/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://thanhprowin1.github.io/about/" title="Về tôi">
+                    <span>Về tôi</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      JS Modern: ES6&#43; có gì mới? Nâng cấp code JavaScript của bạn 
+    </h1>
+    <div class="post-description">
+      ES6 là bản cập nhật lớn nhất trong lịch sử JavaScript. Bài viết này sẽ giới thiệu những tính năng cốt lõi và hay dùng nhất giúp code của bạn trở nên ngắn gọn, dễ đọc và mạnh mẽ hơn.
+    </div>
+    <div class="post-meta"><span title='2025-10-12 22:50:00 +0700 +07'>October 12, 2025</span>&nbsp;·&nbsp;<span>Hữu Khang</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="giới-thiệu-es6-là-gì">Giới thiệu: ES6 là gì?<a hidden class="anchor" aria-hidden="true" href="#giới-thiệu-es6-là-gì">#</a></h2>
+<p>ES6 (hay ECMAScript 2015) là phiên bản thứ sáu của chuẩn ECMAScript, thứ đặt ra các quy tắc cho ngôn ngữ JavaScript. Hãy coi nó như một bản &ldquo;nâng cấp hệ điều hành&rdquo; cực lớn cho JavaScript. Trước ES6, code JavaScript có phần dài dòng và đôi khi khó quản lý. ES6 ra đời đã thay đổi cuộc chơi, mang đến những cú pháp mới giúp lập trình viên viết code &ldquo;sạch&rdquo; và hiệu quả hơn.</p>
+<p>Ngày nay, các tính năng của ES6+ (ES6 và các phiên bản sau nó) đã trở thành tiêu chuẩn. Hãy cùng điểm qua những thay đổi đáng giá nhất nhé!</p>
+<hr>
+<h2 id="1-tạm-biệt-var-chào-let-và-const">1. Tạm biệt <code>var</code>, chào <code>let</code> và <code>const</code><a hidden class="anchor" aria-hidden="true" href="#1-tạm-biệt-var-chào-let-và-const">#</a></h2>
+<p>Trước ES6, chúng ta chỉ có <code>var</code> để khai báo biến. <code>var</code> có một số hành vi khó hiểu liên quan đến &ldquo;scope&rdquo; (phạm vi). ES6 giới thiệu <code>let</code> và <code>const</code> để giải quyết vấn đề này.</p>
+<ul>
+<li><strong><code>let</code></strong>: Cho phép bạn khai báo các biến có <strong>phạm vi trong khối (block scope)</strong>. Tức là biến chỉ tồn tại bên trong cặp dấu ngoặc nhọn <code>{}</code> gần nhất.</li>
+<li><strong><code>const</code></strong>: Giống như <code>let</code>, nhưng dùng để khai báo <strong>hằng số</strong>. Tức là giá trị của biến không thể được gán lại sau khi khai báo.</li>
+</ul>
+<h3 id="ví-dụ-code">Ví dụ Code:<a hidden class="anchor" aria-hidden="true" href="#ví-dụ-code">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Trước ES6 (dùng var)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span>); <span style="color:#75715e">// In ra 0, 1, 2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span>); <span style="color:#75715e">// Vẫn in ra 3! Biến i bị &#34;rò rỉ&#34; ra ngoài vòng lặp.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Với ES6 (dùng let)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">j</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>; <span style="color:#a6e22e">j</span><span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">j</span>); <span style="color:#75715e">// In ra 0, 1, 2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// console.log(j); // Lỗi! Biến j không tồn tại ở đây.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">PI</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.14</span>;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// PI = 3.14159; // Lỗi! Không thể gán lại giá trị cho hằng số.+++
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">date</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2025-10-13T00:17:10+07:00&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">draft</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Js Es6 Co Gi Moi&#39;</span>
+</span></span></code></pre></div><hr>
+<h2 id="2-arrow-functions----viết-hàm-ngắn-gọn">2. Arrow Functions (<code>=&gt;</code>) - Viết hàm ngắn gọn<a hidden class="anchor" aria-hidden="true" href="#2-arrow-functions----viết-hàm-ngắn-gọn">#</a></h2>
+<p>Arrow function cung cấp một cú pháp ngắn hơn để viết các hàm, đặc biệt hữu ích cho các hàm callback.</p>
+<h3 id="ví-dụ-code-1">Ví dụ Code:<a hidden class="anchor" aria-hidden="true" href="#ví-dụ-code-1">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Trước ES6
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">doubledOld</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">map</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">n</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">doubledOld</span>); <span style="color:#75715e">// [2, 4, 6]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Với ES6
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">doubledNew</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">n</span> =&gt; <span style="color:#a6e22e">n</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>); <span style="color:#75715e">// Ngắn hơn rất nhiều!
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">doubledNew</span>); <span style="color:#75715e">// [2, 4, 6]
+</span></span></span></code></pre></div><hr>
+<hr>
+<h2 id="3-template-literals----tạm-biệt-phép--chuỗi">3. Template Literals (<code>`</code>) - Tạm biệt phép <code>+</code> chuỗi<a hidden class="anchor" aria-hidden="true" href="#3-template-literals----tạm-biệt-phép--chuỗi">#</a></h2>
+<p>Template Literals cho phép bạn nhúng biến và biểu thức vào trong chuỗi một cách dễ dàng, cũng như tạo chuỗi nhiều dòng mà không cần <code>\n</code>.</p>
+<h3 id="ví-dụ-code-2">Ví dụ Code:<a hidden class="anchor" aria-hidden="true" href="#ví-dụ-code-2">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Khang&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">22</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Trước ES6
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">greetingOld</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Xin chào, tôi là &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; và tôi &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; tuổi.&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Với ES6
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">greetingNew</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Xin chào, tôi là </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> và tôi </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">age</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> tuổi.`</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">greetingNew</span>);
+</span></span></code></pre></div><hr>
+<hr>
+<h2 id="4-destructuring---giải-nén-object-và-array">4. Destructuring - &ldquo;Giải nén&rdquo; Object và Array<a hidden class="anchor" aria-hidden="true" href="#4-destructuring---giải-nén-object-và-array">#</a></h2>
+<p>Destructuring là một cú pháp tiện lợi cho phép bạn trích xuất dữ liệu từ Mảng (Array) hoặc Đối tượng (Object) và gán chúng vào các biến riêng biệt.</p>
+<h3 id="ví-dụ-code-3">Ví dụ Code:<a hidden class="anchor" aria-hidden="true" href="#ví-dụ-code-3">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Destructuring cho Object
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">person</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">firstName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Hữu&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">lastName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Khang&#34;</span>,
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Cách cũ: const firstName = person.firstName; const lastName = person.lastName;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">firstName</span>, <span style="color:#a6e22e">lastName</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">person</span>; <span style="color:#75715e">// Cách mới
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">firstName</span>); <span style="color:#75715e">// &#34;Hữu&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Destructuring cho Array
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">colors</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;đỏ&#34;</span>, <span style="color:#e6db74">&#34;vàng&#34;</span>, <span style="color:#e6db74">&#34;xanh&#34;</span>];
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Cách cũ: const red = colors[0]; const yellow = colors[1];
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">red</span>, <span style="color:#a6e22e">yellow</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">colors</span>; <span style="color:#75715e">// Cách mới
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">red</span>); <span style="color:#75715e">// &#34;đỏ&#34;
+</span></span></span></code></pre></div><hr>
+<hr>
+<h2 id="kết-luận">Kết luận<a hidden class="anchor" aria-hidden="true" href="#kết-luận">#</a></h2>
+<p>Những tính năng trên chỉ là một phần nhỏ trong những gì ES6+ mang lại, nhưng chúng là những thay đổi có tác động lớn nhất đến cách chúng ta viết code JavaScript hàng ngày. Việc áp dụng các cú pháp hiện đại này không chỉ giúp code của bạn ngắn gọn hơn mà còn dễ đọc, dễ bảo trì và ít lỗi hơn. Hãy bắt đầu nâng cấp code của bạn ngay hôm nay!</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://thanhprowin1.github.io/">Blog của Hữu Khang</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
